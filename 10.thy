@@ -36,7 +36,7 @@ proof (induct i)
 qed (simp)
 
 lemma h_monotonic_first_suc: "h (Suc n) (Suc x) \<ge> h n (Suc x)"
-proof (induct n)
+proof (induct n arbitrary: x)
   case 0
     have "h 0 (Suc x) \<le> h 1 (Suc x)" unfolding h1 by auto
     then show ?case by simp
